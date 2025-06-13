@@ -33,21 +33,21 @@ export default function Home() {
           </button>
           <button
             type="button"
-            className='border-[1px] border-neutral-300 hover:border-teal-600 rounded-full px-2 py-1 cursor-pointer 
+            className='border-[1px] border-neutral-400 hover:border-teal-600 rounded-full px-2 py-1 cursor-pointer 
             hover:bg-teal-50 hover:text-teal-600 transition-colors hover:shadow-sm hover:shadow-teal-600'
           >
             Top Villa
           </button>
           <button
             type="button"
-            className='border-[1px] border-neutral-300 hover:border-teal-600 rounded-full px-2 py-1 cursor-pointer 
+            className='border-[1px] border-neutral-400 hover:border-teal-600 rounded-full px-2 py-1 cursor-pointer 
             hover:bg-teal-50 hover:text-teal-600 transition-colors hover:shadow-sm hover:shadow-teal-600'
           >
             Free Reschedule
           </button>
           <button
             type="button"
-            className='border-[1px] border-neutral-300 hover:border-teal-600 rounded-full px-2 py-1 cursor-pointer 
+            className='border-[1px] border-neutral-400 hover:border-teal-600 rounded-full px-2 py-1 cursor-pointer 
             hover:bg-teal-50 hover:text-teal-600 transition-colors hover:shadow-sm hover:shadow-teal-600 
             sm:hidden lg:block'
           >
@@ -55,7 +55,7 @@ export default function Home() {
           </button>
           <button
             type="button"
-            className='border-[1px] border-neutral-300 hover:border-teal-600 rounded-full px-2 py-1 cursor-pointer 
+            className='border-[1px] border-neutral-400 hover:border-teal-600 rounded-full px-2 py-1 cursor-pointer 
             hover:bg-teal-50 hover:text-teal-600 transition-colors hover:shadow-sm hover:shadow-teal-600 
             sm:hidden lg:block'
           >
@@ -63,7 +63,7 @@ export default function Home() {
           </button>
           <button
             type="button"
-            className='border-[1px] border-neutral-300 hover:border-teal-600 rounded-full px-2 py-1 cursor-pointer 
+            className='border-[1px] border-neutral-400 hover:border-teal-600 rounded-full px-2 py-1 cursor-pointer 
             hover:bg-teal-50 hover:text-teal-600 transition-colors hover:shadow-sm hover:shadow-teal-600 
            sm:hidden lg:block'
           >
@@ -71,7 +71,7 @@ export default function Home() {
           </button>
           <button
             type="button"
-            className='hidden sm:flex lg:hidden items-center justify-center border-[1px] border-neutral-300 hover:border-teal-600 rounded-full p-1 cursor-pointer 
+            className='hidden sm:flex lg:hidden items-center justify-center border-[1px] border-neutral-400 hover:border-teal-600 rounded-full p-1 cursor-pointer 
             hover:bg-teal-50 transition-colors hover:shadow-sm hover:shadow-teal-600'
           >
             <Image src="/assets/icons/Linear/Arrows/Alt Arrow Down.png" width={19} height={19} alt='Filter' />
@@ -80,7 +80,7 @@ export default function Home() {
         <div className='flex items-center gap-3 text-[13.78px] sm:text-sm font-semibold'>
           <button
             type="button"
-            className='hidden sm:flex items-center justify-center gap-1 border-[1px] border-neutral-300 hover:border-teal-600 
+            className='hidden sm:flex items-center justify-center gap-1 border-[1px] border-neutral-400 hover:border-teal-600 
             rounded-full px-2 py-1 cursor-pointer hover:bg-teal-50 hover:text-teal-600 transition-colors hover:shadow-sm
              hover:shadow-teal-600'
           >
@@ -89,7 +89,7 @@ export default function Home() {
           </button>
           <button
             type="button"
-            className='border-[1px] border-neutral-300 hover:border-teal-600 rounded-full px-2 py-1 cursor-pointer 
+            className='border-[1px] border-neutral-400 hover:border-teal-600 rounded-full px-2 py-1 cursor-pointer 
             hover:bg-teal-50 hover:text-teal-600 transition-colors hover:shadow-sm hover:shadow-teal-600'
           >
             <span className='opacity-50'>Sort by: </span><span>Highest Price</span>
@@ -111,7 +111,7 @@ export default function Home() {
             >
               <div>
                 <Image src={item.image} width={98} height={68} alt={item.name}
-                  className='w-full h-[200px] rounded-2xl cursor-pointer hover:brightness-50'
+                  className='w-full h-[200px] rounded-2xl cursor-pointer hover:brightness-50 transition-all'
                 />
               </div>
               <div className='flex items-center gap-1 text-zinc-900 text-[11px] font-medium whitespace-nowrap overflow-x-hidden'>
@@ -152,8 +152,8 @@ export default function Home() {
                   </h3>
                 </div>
                 <div className='flex items-center justify-between'>
-                  <div className='flex items-center gap-1 bg-zinc-200 rounded-full px-2 py-1 cursor-pointer hover:bg-teal-100 
-                  hover:text-teal-600 transition-colors text-[11px] sm:ml-1'>
+                  <div className='flex items-center gap-1 text-[11px] sm:ml-1 border-[1px] border-neutral-400 hover:border-teal-600 rounded-full px-2 py-1 cursor-pointer
+                   hover:bg-teal-50 hover:text-teal-600 transition-colors hover:shadow-sm hover:shadow-teal-600'>
                     <div className='flex items-center justify-center gap-0.5'>
                       <Image src="/assets/icons/bed 1.png" width={13} height={13} alt='Bed' />
                       <span>{item.offers.bed}</span>

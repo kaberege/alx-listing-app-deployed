@@ -150,8 +150,8 @@ const Header = () => {
               TypesOfAcommodation.map((type, index) => (
                 <div
                   key={index}
-                  className='flex flex-col gap-1 items-center justify-center h-16 pb-2 hover:border-b-2 hover:border-b-neutral-600
-            cursor-pointer transition-transform duration-300 text-neutral-500 hover:text-neutral-800'
+                  className='flex flex-col gap-1 items-center justify-center pb-2 border-b-2 border-b-neutral-600/0 hover:border-b-neutral-600
+            cursor-pointer transition-colors duration-200 text-neutral-500 hover:text-neutral-800'
                 >
                   <Image src={type.image} width={34} height={34} alt={type.name} />
                   <span className='text-xs font-medium whitespace-nowrap'>{type.name}</span>
