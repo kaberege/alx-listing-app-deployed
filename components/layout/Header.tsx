@@ -12,11 +12,11 @@ const Header = () => {
         <div className='flex items-center justify-center gap-3'>
           <Image
             src="/assets/icons/linear/school/Case Minimalistic.png"
-            width={24}
-            height={24}
+            width={500}
+            height={500}
             alt="Email box"
             title='Email box'
-            className='cursor-pointer'
+            className='cursor-pointer w-5 h-5'
           />
           <p className='text-white text-xs sm:text-base font-semibold'>Overseas trip? Get the latest information on travel guides</p>
           <button
@@ -30,11 +30,11 @@ const Header = () => {
         <div className='w-full max-w-7xl bg-white flex items-center justify-between px-2 sm:px-4  xl:px-1 mx-auto'>
           <Image
             src="/assets/hero-section-image/alx-black.png"
-            width={58.75}
-            height={30.6}
+            width={500}
+            height={500}
             alt='alx logo'
             title='alx logo'
-            className='cursor-pointer hidden sm:block max-md:w-[40px] max-md:h-[20px]'
+            className='cursor-pointer hidden sm:block w-[40px] h-[20px] md:w-[58.75px] md:h-[30.6px]'
           />
           <div className='rounded-full border-[1px] border-neutral-300 py-1 pl-4 pr-1'>
             <form className='flex items-center'>
@@ -111,10 +111,10 @@ const Header = () => {
               <button className='flex items-center justify-center w-6 h-6 sm:w-9 sm:h-9 rounded-full bg-amber-500 hover:bg-amber-400 transition-colors cursor-pointer'>
                 <Image
                   src="/assets/icons/linear/search/Magnifer.png"
-                  width={20}
-                  height={20}
+                  width={500}
+                  height={500}
                   alt='Search'
-                  className='max-sm:w-[17px] max-sm:h-[17px]'
+                  className='w-[17px] h-[17px] sm:w-5 sm:h-5'
                 />
               </button>
             </form>
@@ -122,10 +122,10 @@ const Header = () => {
           <button className='lg:hidden flex items-center justify-center rounded-full w-[30px] h-[30px] bg-teal-600'>
             <Image
               src="/assets/icons/profile 2.png"
-              width={30}
-              height={30}
+              width={500}
+              height={500}
               alt='profile'
-              className='cursor-pointer'
+              className='cursor-pointer w-[30px] h-[30px]'
             />
           </button>
           <div className='flex gap-2 max-lg:hidden'>
@@ -153,7 +153,7 @@ const Header = () => {
                   className='flex flex-col gap-1 items-center justify-center pb-2 border-b-2 border-b-neutral-600/0 hover:border-b-neutral-600
             cursor-pointer transition-colors duration-200 text-neutral-500 hover:text-neutral-800'
                 >
-                  <Image src={type.image} width={34} height={34} alt={type.name} />
+                  <Image src={type.image} width={500} height={500} alt={type.name} className='w-[34px] h-[34px]' />
                   <span className='text-xs font-medium whitespace-nowrap'>{type.name}</span>
                 </div>
               ))

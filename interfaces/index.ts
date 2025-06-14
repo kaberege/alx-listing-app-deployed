@@ -20,6 +20,7 @@ export interface ButtonProps {
   styles?: string;
   icon?: string;
   alt?: string
+  imageStyles?: string;
 }
 
 export interface PillProps {

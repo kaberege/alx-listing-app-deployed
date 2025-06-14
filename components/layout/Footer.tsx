@@ -11,10 +11,11 @@ const Footer = () => {
           <div className='flex flex-col gap-6'>
             <Image
               src={alxLogo}
-              width={58.73}
-              height={30.6}
+              width={500}
+              height={500}
               alt='alx logo'
               title='alx logo'
+              className='w-[58.73px] h-[30.6px]'
             />
             <p className='text-[11px] sm:text-base text-neutral-300 font-medium'>ALX is a platform where travelers can discover and book unique, comfortable, and affordable lodging options worldwide. From cozy city apartments and tranquil countryside retreats to exotic beachside villas, ALX connects you with the perfect place to stay for any trip.</p>
           </div>

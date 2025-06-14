@@ -1,11 +1,12 @@
 import React from 'react';
 import Image from 'next/image';
 import { PROPERTYLISTINGSAMPLE } from '@/constants';
+import Link from 'next/link';
 
 export default function Home() {
   return (
-    <>
-      <section className='px-4 xl:px-0'>
+    <div className='px-2 sm:px-3 lg:px-4'>
+      <section>
         <div
           className='bg-[url("/assets/hero-section-image/Image_mobile.png")] sm:bg-[url("/assets/hero-section-image/Image_desktop.png")] 
           bg-center bg-no-repeat bg-cover h-[296px] sm:h-[421px] lg:h-[481px] w-full max-w-7xl rounded-3xl mx-auto flex items-center justify-center'>
@@ -15,14 +16,20 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className='w-full max-w-7xl mx-auto max-sm:overflow-x-hidden px-4 xl:px-0 flex items-center justify-between gap-3 py-5 whitespace-nowrap'>
+      <section className='w-full max-w-7xl mx-auto max-sm:overflow-x-hidden flex items-center justify-between gap-3 py-5 whitespace-nowrap'>
         <div className='flex items-center gap-3 text-zinc-900 text-[13.78px] sm:text-sm font-semibold'>
           <button
             type="button"
             className='flex items-center justify-center border-[1px] border-neutral-300 hover:border-teal-600 rounded-full p-1 cursor-pointer 
             hover:bg-teal-50 transition-colors hover:shadow-sm hover:shadow-teal-600 sm:hidden w-8 h-8'
           >
-            <Image src="/assets/icons/Linear/Essentional, UI/Filter.png" width={18} height={18} alt='Filter' />
+            <Image
+              src="/assets/icons/Linear/Essentional, UI/Filter.png"
+              width={500}
+              height={500}
+              alt='Filter'
+              className='w-[18px] h-[18px]'
+            />
           </button>
           <button
             type="button"
@@ -74,7 +81,13 @@ export default function Home() {
             className='hidden sm:flex lg:hidden items-center justify-center border-[1px] border-neutral-400 hover:border-teal-600 rounded-full p-1 cursor-pointer 
             hover:bg-teal-50 transition-colors hover:shadow-sm hover:shadow-teal-600'
           >
-            <Image src="/assets/icons/Linear/Arrows/Alt Arrow Down.png" width={19} height={19} alt='Filter' />
+            <Image
+              src="/assets/icons/Linear/Arrows/Alt Arrow Down.png"
+              width={500}
+              height={500}
+              alt='Filter'
+              className='w-[19px] h-[19px]'
+            />
           </button>
         </div>
         <div className='flex items-center gap-3 text-[13.78px] sm:text-sm font-semibold'>
@@ -85,7 +98,12 @@ export default function Home() {
              hover:shadow-teal-600'
           >
             <span className='hidden lg:block'>Filter</span>
-            <Image src="/assets/icons/Linear/Essentional, UI/Filter.png" width={18} height={18} alt='Filter' />
+            <Image
+              src="/assets/icons/Linear/Essentional, UI/Filter.png"
+              width={500}
+              height={500}
+              alt='Filter'
+              className='w-[18px] h-[18px]' />
           </button>
           <button
             type="button"
@@ -96,11 +114,17 @@ export default function Home() {
           </button>
         </div>
       </section>
-      <section className='relative container max-sm:max-w-[390px] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-3 gap-y-8 px-2 md:px-0'>
+      <section className='relative container max-sm:max-w-[390px] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-3 gap-y-8'>
         <div
-          className='absolute top-2 left-1 md:-left-1 flex gap-1 rounded-r-full rounded-tl-full bg-teal-600 hover:bg-teal-500 
+          className='absolute top-2 -left-1 flex items-center gap-1 rounded-r-full rounded-tl-full bg-teal-600 hover:bg-teal-500 
         cursor-pointer transition-colors py-1 px-2 shadow-xl shadow-teal-800 z-50'>
-          <Image src="/assets/icons/Discount.png" width={14} height={14} alt="Discount" />
+          <Image
+            src="/assets/icons/Discount.png"
+            width={500}
+            height={500}
+            alt="Discount"
+            className='w-3.5 h-3.5'
+          />
           <span className='text-sm text-white font-medium'>60% Off</span>
         </div>
         {
@@ -109,10 +133,12 @@ export default function Home() {
               key={index}
               className='flex flex-col gap-3'
             >
-              <div>
-                <Image src={item.image} width={98} height={68} alt={item.name}
-                  className='w-full h-[200px] rounded-2xl cursor-pointer hover:brightness-50 transition-all'
-                />
+              <div className='h-[200px]'>
+                <Link href={`property/${item.name}`}>
+                  <Image src={item.image} width={500} height={500} alt={item.name} title={item.name}
+                    className='w-full h-full object-cover rounded-2xl cursor-pointer hover:brightness-50 transition-all'
+                  />
+                </Link>
               </div>
               <div className='flex items-center gap-1 text-zinc-900 text-[11px] font-medium whitespace-nowrap overflow-x-hidden'>
                 <button
@@ -142,7 +168,13 @@ export default function Home() {
                   <div className='flex items-center justify-between'>
                     <h2 className='text-zinc-900 text-lg font-semibold'>{item.name}</h2>
                     <div className='flex items-center justify-center gap-1'>
-                      <Image src="/assets/icons/Star 2.png" width={15} height={15} alt='star' />
+                      <Image
+                        src="/assets/icons/Star 2.png"
+                        width={500}
+                        height={500}
+                        alt='star'
+                        className='w-[15px] h-[15px]'
+                      />
                       <span className='text-zinc-900 text-sm font-medium'>{item.rating}</span>
                     </div>
                   </div>
@@ -155,15 +187,32 @@ export default function Home() {
                   <div className='flex items-center gap-1 text-[11px] sm:ml-1 border-[1px] border-neutral-400 hover:border-teal-600 rounded-full px-2 py-1 cursor-pointer
                    hover:bg-teal-50 hover:text-teal-600 transition-colors hover:shadow-sm hover:shadow-teal-600'>
                     <div className='flex items-center justify-center gap-0.5'>
-                      <Image src="/assets/icons/bed 1.png" width={13} height={13} alt='Bed' />
+                      <Image
+                        src="/assets/icons/bed 1.png"
+                        width={500}
+                        height={500}
+                        alt='Bed'
+                        className='w-[13px] h-[13px]'
+                      />
                       <span>{item.offers.bed}</span>
                     </div>
                     <div className='flex items-center justify-center gap-0.5'>
-                      <Image src="/assets/icons/bathtub 1.png" width={13} height={13} alt='Shower' />
+                      <Image
+                        src="/assets/icons/bathtub 1.png"
+                        width={500}
+                        height={500}
+                        alt='Shower'
+                        className='w-[13px] h-[13px]'
+                      />
                       <span>{item.offers.shower}</span>
                     </div>
                     <div className='flex items-center justify-center gap-0.5'>
-                      <Image src="/assets/icons/people 1.png" width={13} height={13} alt='Occupants' />
+                      <Image
+                        src="/assets/icons/people 1.png"
+                        width={500}
+                        height={500} alt='Occupants'
+                        className='w-[13px] h-[13px]'
+                      />
                       <span>{item.offers.occupants}</span>
                     </div>
                   </div>
@@ -185,6 +234,6 @@ export default function Home() {
         </button>
         <p className='text-sm text-black text-center font-medium'>Click to see more listings</p>
       </section>
-    </>
+    </div>
   );
 }

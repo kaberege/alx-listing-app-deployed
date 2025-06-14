@@ -520,3 +520,33 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps[] = [
   }
 ];
 
+export const reviews = [
+  {
+    avatar: "/assets/detail-images/image 25.png",
+    name: "kerry",
+    comment: "I simply don’t have the words to describe how incredibly beautiful the villa and its surroundings are. This is a wonderful remote spot that is simply breathtaking",
+    experience: "3 years on ALX",
+    time: "March 2024"
+  },
+  {
+    avatar: "/assets/detail-images/image 25-2.png",
+    name: "Pooja",
+    comment: "We stayed at this home for a family vacation of 7 adults (including 3 couples, 1 baby) and had a fantastic stay. The house was BEAUTIFUL and honestly better than shown in pictures,",
+    experience: "1 years on ALX",
+    time: "March 2024"
+  },
+  {
+    avatar: "/assets/detail-images/image 25-1.png",
+    name: "Cindy & Ben",
+    comment: "I simply don’t have the words to describe how incredibly beautiful the villa and its surroundings are. This is a wonderful remote spot that is simply breathtaking",
+    experience: "1 years on ALX",
+    time: "August 2023"
+  },
+  {
+    avatar: "/assets/detail-images/image 25-3.png",
+    name: "Marnie",
+    comment: "We stayed at this home for a family vacation of 7 adults (including 3 couples, 1 baby) and had a fantastic stay. The house was BEAUTIFUL and honestly better than shown in pictures, ",
+    experience: "5 years on ALX",
+    time: "January 2023"
+  },
+]
