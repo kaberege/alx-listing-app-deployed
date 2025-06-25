@@ -1,79 +1,210 @@
+import { BiCheck } from "react-icons/bi";
+import Image from "next/image";
+import credti from "@/public/assets/icons/Bold/Security/Lock.png"
+import { Span } from "next/dist/trace";
+
 const BookingForm = () => (
-  <div className="bg-white p-6 shadow-md rounded-lg">
-    <h2 className="text-xl font-semibold">Contact Detail</h2>
+  <section className="bg-white p-6 lg:pt-8 shadow-md rounded-lg">
+    <h2 className="text-zinc-950 text-base lg:text-xl font-semibold">Contact Detail</h2>
     <form>
       {/* Contact Information */}
-      <div className="grid grid-cols-2 gap-4">
+      <div className="grid grid-cols-2 gap-4 mt-2">
         <div>
-          <label>First Name</label>
-          <input type="text" className="border p-2 w-full mt-2" />
+          <label
+            htmlFor="first-name-booking"
+            className="text-zinc-950 text-xs lg:text-sm font-medium">
+            First Name
+          </label>
+          <input
+            id="first-name-booking"
+            type="text"
+            className="border border-zinc-300 rounded-md focus:outline-1 focus:outline-teal-600 px-2 py-1 w-full mt-1"
+          />
         </div>
         <div>
-          <label>Last Name</label>
-          <input type="text" className="border p-2 w-full mt-2" />
+          <label
+            htmlFor="last-name-booking"
+            className="text-zinc-950 text-xs lg:text-sm font-medium">
+            Last Name
+          </label>
+          <input
+            id="last-name-booking"
+            type="text"
+            className="border border-zinc-300 rounded-md focus:outline-1 focus:outline-teal-600 px-2 py-1 w-full mt-1"
+          />
         </div>
       </div>
-      <div className="grid grid-cols-2 gap-4 mt-4">
+      <div className="grid grid-cols-2 gap-4 mt-2">
         <div>
-          <label>Email</label>
-          <input type="email" className="border p-2 w-full mt-2" />
+          <label
+            htmlFor="email-booking"
+            className="text-zinc-950 text-xs lg:text-sm font-medium">
+            Email
+          </label>
+          <input
+            id="email-booking"
+            type="email"
+            className="border border-zinc-300 rounded-md focus:outline-1 focus:outline-teal-600 px-2 py-1 w-full mt-1"
+          />
         </div>
         <div>
-          <label>Phone Number</label>
-          <input type="text" className="border p-2 w-full mt-2" />
+          <label
+            htmlFor="phone-booking"
+            className="text-zinc-950 text-xs lg:text-sm font-medium">
+            Phone Number
+          </label>
+          <input
+            id="phone-booking"
+            type="text"
+            className="border border-zinc-300 rounded-md focus:outline-1 focus:outline-teal-600 px-2 py-1 w-full mt-1" />
         </div>
       </div>
 
-      {/* Payment Information */}
-      <h2 className="text-xl font-semibold mt-6">Pay with</h2>
-      <div className="mt-4">
-        <label>Card Number</label>
-        <input type="text" className="border p-2 w-full mt-2" />
+      {/* Accept Information */}
+      <div className="mt-4 pb-6 border-b border-b-zinc-300">
+        <label className="group flex items-center cursor-pointer">
+          <input
+            type="checkbox"
+            className="peer hidden"
+          />
+          <div
+            className="flex items-center justify-center w-4 h-4 rounded border-2 border-teal-600 
+          peer-checked:bg-teal-600 peer-checked:border-teal-600/0 peer-checked:hover:bg-teal-700 
+          cursor-pointer transition-colors duration-200">
+            <BiCheck className="hidden group-has-[:checked]:block text-white font-bold shrink-0" />
+          </div>
+          <span className="ml-2 text-[11px]">Receive text message update about your booking. Messages rates may apply.</span>
+        </label>
       </div>
-      <div className="grid grid-cols-2 gap-4 mt-4">
-        <div>
-          <label>Expiration Date</label>
-          <input type="text" className="border p-2 w-full mt-2" />
+
+      {/* Payment Information */}
+      <h2 className="text-zinc-950 text-base lg:text-xl font-semibold mt-6">Pay with</h2>
+      <div className="flex items-center border border-zinc-300 rounded-md px-2 mt-2">
+        <Image
+          src="/assets/icons/credit-card 1.png"
+          width={500}
+          height={500}
+          alt="Payment method"
+          className="w-4 h-4 mr-2"
+        />
+        <select
+          name="pay-method"
+          id="pay-method"
+          className="w-full outline-none text-zinc-700 text-sm py-2"
+        >
+          <option value="">Credit or debit card</option>
+          <option value="credit">Credit card</option>
+          <option value="debit">Debit card</option>
+        </select>
+      </div>
+      <div className="flex flex-col">
+        <div className="flex items-center border border-zinc-300 rounded-t-md px-2 mt-2">
+          <label
+            htmlFor="card-booking"
+            className="flex items-center shrink-0"
+          >
+            <span className="text-xs text-zinc-500 mr-3">Card number</span>
+            <Image
+              src="/assets/icons/Bold/Security/Lock.png"
+              width={500}
+              height={500}
+              alt="Payment method"
+              className="w-3 h-3"
+            />
+          </label>
+          <input
+            id="card-booking"
+            type="text"
+            className="w-full outline-none text-sm py-2 px-1" />
         </div>
-        <div>
-          <label>CVV</label>
-          <input type="text" className="border p-2 w-full mt-2" />
+        <div className="grid grid-cols-2 border-x border-b border-zinc-300 rounded-b-md text-xs">
+          <div className="border-r border-zinc-300 ">
+            <input
+              id="expiration-booking"
+              type="text"
+              placeholder="Expiration Date"
+              className="outline-none px-2 py-1.5 w-full mt-1" />
+          </div>
+          <div>
+            <input
+              id="CVV-booking"
+              type="text"
+              placeholder="CVV"
+              className="outline-none px-2 py-1.5 w-full mt-1"
+            />
+          </div>
         </div>
       </div>
 
       {/* Billing Address */}
-      <h2 className="text-xl font-semibold mt-6">Billing Address</h2>
-      <div className="mt-4">
-        <label>Street Address</label>
-        <input type="text" className="border p-2 w-full mt-2" />
+      <h2 className="text-zinc-950 text-xs font-semibold mt-4 mb-1">Billing Address</h2>
+      <div className="border border-zinc-300 rounded-md text-xs">
+        <div className="border-b border-zinc-300">
+          <input
+            id="street-booking"
+            type="text"
+            placeholder="Street Address"
+            className="outline-none px-2 py-1.5 w-full mt-1"
+          />
+        </div>
+        <div className="border-b border-zinc-300">
+          <input
+            id="Apt-suite"
+            type="text"
+            placeholder="Apt or suite number"
+            className="outline-none px-2  py-1.5 w-full mt-1"
+          />
+        </div>
+        <div className="border-b border-zinc-300">
+          <input
+            id="city-booking"
+            type="text"
+            placeholder="City"
+            className="outline-none px-2  py-1.5 w-full mt-1"
+          />
+        </div>
+        <div className="grid grid-cols-2">
+          <div className="border-r border-zinc-300">
+            <input
+              id="state-booking"
+              type="text"
+              placeholder=" State"
+              className="outline-none px-2  py-1.5 w-full mt-1"
+            />
+          </div>
+          <div className="">
+            <input
+              id="zip-code-booking"
+              type="text"
+              placeholder="Zip Code"
+              className="outline-none px-2 py-1.5 w-full mt-1"
+            />
+          </div>
+        </div>
       </div>
-      <div className="grid grid-cols-2 gap-4 mt-4">
-        <div>
-          <label>City</label>
-          <input type="text" className="border p-2 w-full mt-2" />
-        </div>
-        <div>
-          <label>State</label>
-          <input type="text" className="border p-2 w-full mt-2" />
-        </div>
-      </div>
-      <div className="grid grid-cols-2 gap-4 mt-4">
-        <div>
-          <label>Zip Code</label>
-          <input type="text" className="border p-2 w-full mt-2" />
-        </div>
-        <div>
-          <label>Country</label>
-          <input type="text" className="border p-2 w-full mt-2" />
-        </div>
+      <div className="flex flex-col border border-zinc-300 rounded-md mt-4 px-2">
+        <h3 className="text-zinc-500 text-[10px] font-medium pl-1">
+          Country
+        </h3>
+        <select
+          name="country-booking"
+          id="country-booking"
+          className="w-full text-[11px] outline-none py-0.5"
+        >
+          <option value="Ghana">Ghana</option>
+          <option value="Rwanda">Rwanda</option>
+          <option value="Uganada">Uganada</option>
+        </select>
       </div>
 
       {/* Submit Button */}
-      <button className="mt-6 bg-green-500 text-white py-2 px-4 rounded-md w-full">
+      <button
+        className="text-sm mt-6 w-full bg-teal-600 text-white py-2 px-4 rounded-md hover:bg-teal-700 
+        transition-colors duration-300 cursor-pointer shadow-md shadow-teal-900 focus:ring-2 focus:ring-teal-800">
         Confirm & Pay
       </button>
     </form>
-  </div>
+  </section>
 );
 
 export default BookingForm;

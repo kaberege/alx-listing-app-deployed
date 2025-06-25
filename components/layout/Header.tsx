@@ -1,7 +1,9 @@
 import React from 'react'
 import Image from 'next/image'
+import Link from 'next/link';
 import { TypesOfAcommodation } from '@/constants'
 import { usePathname } from 'next/navigation';
+import { BsArrowLeft } from 'react-icons/bs';
 
 const Header = () => {
   const pathname = usePathname();
@@ -158,6 +160,21 @@ const Header = () => {
                 </div>
               ))
             }
+          </section>
+        )
+      }
+      {
+        ["/booking"].includes(pathname) && (
+          <section className="bg-slate-50 border-y border-y-neutral-200">
+            <div className="container mx-auto flex items-center gap-2 px-4 lg:px-6">
+              <Link
+                href="#"
+                className='flex items-center space-x-1 text-teal-600 font-bold cursor-pointer hover:tracking-wide
+              hover:text-teal-700 py-3 border-b-2 border-b-teal-600  hover:border-b-teal-700 transition-all '>
+                <BsArrowLeft size={16} />
+                <span className="text-sm">Booking</span>
+              </Link>
+            </div>
           </section>
         )
       }
