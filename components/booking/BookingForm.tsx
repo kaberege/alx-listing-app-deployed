@@ -1,14 +1,13 @@
 import { BiCheck } from "react-icons/bi";
 import Image from "next/image";
-import credti from "@/public/assets/icons/Bold/Security/Lock.png"
-import { Span } from "next/dist/trace";
+import CancellationPolicy from "./CancellationPolicy";
 
 const BookingForm = () => (
-  <section className="bg-white p-6 lg:pt-8 shadow-md rounded-lg">
+  <section className="sm:grow bg-white p-3 sm:p-6 lg:pt-8 shadow-md rounded-lg">
     <h2 className="text-zinc-950 text-base lg:text-xl font-semibold">Contact Detail</h2>
     <form>
       {/* Contact Information */}
-      <div className="grid grid-cols-2 gap-4 mt-2">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-2">
         <div>
           <label
             htmlFor="first-name-booking"
@@ -34,7 +33,7 @@ const BookingForm = () => (
           />
         </div>
       </div>
-      <div className="grid grid-cols-2 gap-4 mt-2">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-2">
         <div>
           <label
             htmlFor="email-booking"
@@ -70,7 +69,7 @@ const BookingForm = () => (
           <div
             className="flex items-center justify-center w-4 h-4 rounded border-2 border-teal-600 
           peer-checked:bg-teal-600 peer-checked:border-teal-600/0 peer-checked:hover:bg-teal-700 
-          cursor-pointer transition-colors duration-200">
+          cursor-pointer transition-colors duration-200 shrink-0">
             <BiCheck className="hidden group-has-[:checked]:block text-white font-bold shrink-0" />
           </div>
           <span className="ml-2 text-[11px]">Receive text message update about your booking. Messages rates may apply.</span>
@@ -103,7 +102,7 @@ const BookingForm = () => (
             htmlFor="card-booking"
             className="flex items-center shrink-0"
           >
-            <span className="text-xs text-zinc-500 mr-3">Card number</span>
+            <span className="text-[10px] sm:text-xs text-zinc-500 mr-1 sm:mr-3">Card number</span>
             <Image
               src="/assets/icons/Bold/Security/Lock.png"
               width={500}
@@ -196,10 +195,11 @@ const BookingForm = () => (
           <option value="Uganada">Uganada</option>
         </select>
       </div>
+      <CancellationPolicy />
 
       {/* Submit Button */}
       <button
-        className="text-sm mt-6 w-full bg-teal-600 text-white py-2 px-4 rounded-md hover:bg-teal-700 
+        className="text-sm mt-6 w-full sm:max-w-40 lg:max-w-60 mx-auto bg-teal-600 text-white py-2 px-4 rounded-md hover:bg-teal-700 
         transition-colors duration-300 cursor-pointer shadow-md shadow-teal-900 focus:ring-2 focus:ring-teal-800">
         Confirm & Pay
       </button>

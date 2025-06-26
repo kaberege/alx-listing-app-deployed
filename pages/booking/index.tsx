@@ -11,8 +11,8 @@ export default function BookingPage() {
   };
 
   return (
-    <div className="container mx-auto p-6">
-      <div className="grid grid-cols-2 gap-6 pt-2">
+    <div className="container mx-auto px-2 sm:px-6 pb-10 sm:pb-14 ">
+      <div className="flex flex-col-reverse sm:flex-row gap-6 mt-4">
         <BookingForm />
         <OrderSummary bookingDetails={bookingDetails} />
       </div>
