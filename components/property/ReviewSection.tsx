@@ -11,7 +11,8 @@ const ReviewSection: React.FC<{ reviews: any[] }> = ({ reviews }) => {
               width={500}
               height={500}
               alt={review.name}
-              className="w-12 h-12 rounded-full mr-4" />
+              className="w-12 h-12 rounded-full mr-4"
+            />
             <div>
               <p className="font-bold text-sm text-zinc-950">{review.name}</p>
               <p className="text-zinc-500 text-xs">{review.experience} stars</p>

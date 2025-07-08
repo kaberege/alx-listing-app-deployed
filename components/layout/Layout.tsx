@@ -10,6 +10,6 @@ const Layout: React.FC<MyProps> = ({ children }) => {
       <Footer />
     </>
   );
-}
+};
 
 export default Layout;
