@@ -7,10 +7,11 @@ import PropertyDetail from "@/components/property/PropertyDetail";
 export default function PropertyPage() {
   const router = useRouter();
   const { id } = router.query;
-  const [property, setProperty] = useState(null);
+  const propert = PROPERTYLISTINGSAMPLE.find((item) => item.name === id);
+  /* const [property, setProperty] = useState(null);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
-  const propert = PROPERTYLISTINGSAMPLE.find((item) => item.name === id);
+  
 
   useEffect(() => {
     const fetchProperty = async () => {
@@ -48,7 +49,7 @@ export default function PropertyPage() {
         {error}
       </p>
     );
-  }
+  } */
 
   if (!propert)
     return (

@@ -15,19 +15,25 @@ const BookingForm = () => {
     cvv: "",
     billingAddress: "",
     method: "",
+    street: "",
+    apt: "",
+    city: "",
+    state: "",
+    zipCode: "",
+    country: "",
   });
 
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
 
-  const handleChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChange = async (
+    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
+  ) => {
     const { value, name } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = async (
-    e: React.FormEvent<HTMLInputElement | HTMLSelectElement>
-  ) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
     setError(null);
@@ -65,6 +71,7 @@ const BookingForm = () => {
               name="firstName"
               value={formData.firstName}
               onChange={handleChange}
+              required
               className="border border-zinc-300 rounded-md focus:outline-1 focus:outline-teal-600 px-2 py-1 w-full mt-1"
             />
           </div>
@@ -81,6 +88,7 @@ const BookingForm = () => {
               name="lastName"
               value={formData.lastName}
               onChange={handleChange}
+              required
               className="border border-zinc-300 rounded-md focus:outline-1 focus:outline-teal-600 px-2 py-1 w-full mt-1"
             />
           </div>
@@ -99,6 +107,7 @@ const BookingForm = () => {
               name="email"
               value={formData.email}
               onChange={handleChange}
+              required
               className="border border-zinc-300 rounded-md focus:outline-1 focus:outline-teal-600 px-2 py-1 w-full mt-1"
             />
           </div>
@@ -115,6 +124,7 @@ const BookingForm = () => {
               name="phoneNumber"
               value={formData.phoneNumber}
               onChange={handleChange}
+              required
               className="border border-zinc-300 rounded-md focus:outline-1 focus:outline-teal-600 px-2 py-1 w-full mt-1"
             />
           </div>
@@ -155,6 +165,7 @@ const BookingForm = () => {
             id="pay-method"
             value={formData.method}
             onChange={handleChange}
+            required
             className="w-full outline-none text-zinc-700 text-sm py-2"
           >
             <option value="">Credit or debit card</option>
@@ -185,6 +196,7 @@ const BookingForm = () => {
               name="cardNumber"
               value={formData.cardNumber}
               onChange={handleChange}
+              required
               className="w-full outline-none text-sm py-2 px-1"
             />
           </div>
@@ -193,6 +205,10 @@ const BookingForm = () => {
               <input
                 id="expiration-booking"
                 type="text"
+                name="expirationDate"
+                value={formData.expirationDate}
+                onChange={handleChange}
+                required
                 placeholder="Expiration Date"
                 className="outline-none px-2 py-1.5 w-full mt-1"
               />
@@ -201,6 +217,10 @@ const BookingForm = () => {
               <input
                 id="CVV-booking"
                 type="text"
+                name="cvv"
+                value={formData.cvv}
+                onChange={handleChange}
+                required
                 placeholder="CVV"
                 className="outline-none px-2 py-1.5 w-full mt-1"
               />
@@ -217,6 +237,10 @@ const BookingForm = () => {
             <input
               id="street-booking"
               type="text"
+              name="street"
+              value={formData.street}
+              onChange={handleChange}
+              required
               placeholder="Street Address"
               className="outline-none px-2 py-1.5 w-full mt-1"
             />
@@ -225,6 +249,10 @@ const BookingForm = () => {
             <input
               id="Apt-suite"
               type="text"
+              name="apt"
+              value={formData.apt}
+              onChange={handleChange}
+              required
               placeholder="Apt or suite number"
               className="outline-none px-2  py-1.5 w-full mt-1"
             />
@@ -233,6 +261,10 @@ const BookingForm = () => {
             <input
               id="city-booking"
               type="text"
+              name="city"
+              value={formData.city}
+              onChange={handleChange}
+              required
               placeholder="City"
               className="outline-none px-2  py-1.5 w-full mt-1"
             />
@@ -242,6 +274,10 @@ const BookingForm = () => {
               <input
                 id="state-booking"
                 type="text"
+                name="state"
+                value={formData.state}
+                onChange={handleChange}
+                required
                 placeholder=" State"
                 className="outline-none px-2  py-1.5 w-full mt-1"
               />
@@ -250,6 +286,10 @@ const BookingForm = () => {
               <input
                 id="zip-code-booking"
                 type="text"
+                name="zipCode"
+                value={formData.zipCode}
+                onChange={handleChange}
+                required
                 placeholder="Zip Code"
                 className="outline-none px-2 py-1.5 w-full mt-1"
               />
@@ -261,8 +301,11 @@ const BookingForm = () => {
             Country
           </h3>
           <select
-            name="country-booking"
+            name="country"
             id="country-booking"
+            value={formData.country}
+            onChange={handleChange}
+            required
             className="w-full text-[11px] outline-none py-0.5"
           >
             <option value="Ghana">Ghana</option>
@@ -281,7 +324,7 @@ const BookingForm = () => {
         >
           {loading ? "Processing..." : "Confirm & Pay"}
         </button>
-        {error && <p className="text-red-500">{error}</p>}
+        {error && <p className="text-red-500 mt-2 text-xs">{error}</p>}
       </form>
     </section>
   );
