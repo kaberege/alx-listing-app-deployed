@@ -44,7 +44,7 @@ const PropertyDetail: React.FC<{ property: PropertyProps }> = ({
             </div>
             <div className="flex items-center justify-center gap-1">
               <Image
-                src="/assets/icons/Bold/Map & Location/Map Point.png"
+                src="/assets/icons/Bold/maplocation/map-location-point.png"
                 width={500}
                 height={500}
                 alt="Map Location"
@@ -57,7 +57,7 @@ const PropertyDetail: React.FC<{ property: PropertyProps }> = ({
             </div>
             <div className="flex items-center justify-center gap-1">
               <Image
-                src="/assets/icons/profile 1.png"
+                src="/assets/icons/profile1.png"
                 width={500}
                 height={500}
                 alt="Profile"
@@ -173,7 +173,7 @@ const PropertyDetail: React.FC<{ property: PropertyProps }> = ({
             </div>
             <div className="flex items-center justify-center gap-1">
               <Image
-                src="/assets/icons/profile 1.png"
+                src="/assets/icons/profile1.png"
                 width={500}
                 height={500}
                 alt="Profile"
