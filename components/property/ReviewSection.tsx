@@ -1,8 +1,9 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import { type ReviewsProps } from "@/interfaces";
 
-const ReviewSection: React.FC<{ reviews: any[] }> = ({ reviews }) => {
+const ReviewSection: React.FC<{ reviews: ReviewsProps[] }> = ({ reviews }) => {
   const [reviewss, setReviews] = useState([]);
   const [loading, setLoading] = useState(true);
   const [propertyId, setPropertyId] = useState<number>(0);
@@ -23,7 +24,7 @@ const ReviewSection: React.FC<{ reviews: any[] }> = ({ reviews }) => {
       }
     };
 
-    // fetchReviews();
+    fetchReviews();
   }, [propertyId, reviewss]);
 
   if (!loading) {

@@ -1,4 +1,3 @@
-
 import { ReactNode } from "react";
 
 export interface CardProps {
@@ -16,10 +15,10 @@ export interface AcommodationProps {
 export interface ButtonProps {
   label?: string;
   onClick?: () => void;
-  type?: 'button' | 'submit' | 'reset';
+  type?: "button" | "submit" | "reset";
   styles?: string;
   icon?: string;
-  alt?: string
+  alt?: string;
   imageStyles?: string;
 }
 
@@ -33,7 +32,7 @@ export interface PillProps {
 
 export type MyProps = {
   children: ReactNode;
-}
+};
 
 export interface PropertyProps {
   name: string;
@@ -41,19 +40,27 @@ export interface PropertyProps {
     state: string;
     city: string;
     country: string;
-  },
+  };
   rating: number;
-  category: string[],
+  category: string[];
   price: number;
   offers: {
     bed: string;
     shower: string;
     occupants: string;
-  },
+  };
   image: string;
   discount: string;
   description: {
     title: string;
     space: string;
-  },
+  };
+}
+
+export interface ReviewsProps {
+  avatar: string;
+  name: string;
+  comment: string;
+  experience: string;
+  time: string;
 }

@@ -1,6 +1,14 @@
 import Image from "next/image";
 
-const OrderSummary: React.FC<{ bookingDetails: any }> = ({
+interface BookingDetailsProps {
+  propertyName: string;
+  price: number;
+  bookingFee: number;
+  totalNights: number;
+  startDate: string;
+}
+
+const OrderSummary: React.FC<{ bookingDetails: BookingDetailsProps }> = ({
   bookingDetails,
 }) => (
   <section className="shrink-0 bg-white p-3 sm:p-6 shadow-md shadow-zinc-700 rounded-lg w-full sm:w-60 md:w-72 lg:w-90 sm:h-[420px]">
