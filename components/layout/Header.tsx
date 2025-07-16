@@ -31,7 +31,7 @@ const Header = () => {
           </button>
         </div>
       </section>
-      <section className="py-3 border-b-[1px] border-b-neutral-300 overflow-hidden">
+      <section className="bg-white py-3 border-b-[1px] border-b-neutral-300 overflow-hidden">
         <div className="w-full max-w-7xl bg-white flex items-center justify-between px-2 sm:px-4  xl:px-1 mx-auto">
           <Image
             src="/assets/hero-section-image/alx-black.png"

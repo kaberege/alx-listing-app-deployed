@@ -3,14 +3,17 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 
 const ReviewSection: React.FC<{ reviews: any[] }> = ({ reviews }) => {
-  /*   const [reviewssss, setReviews] = useState([]);
+  const [reviewss, setReviews] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [propertyId, setPropertyId] = useState<number>(0);
 
   useEffect(() => {
+    console.log(reviewss);
+    setPropertyId(1);
     const fetchReviews = async () => {
       try {
         const response = await axios.get(
-          `/api/properties/${propertyId}/reviews`
+          `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/properties/${propertyId}/reviews`
         );
         setReviews(response.data);
       } catch (error) {
@@ -20,12 +23,12 @@ const ReviewSection: React.FC<{ reviews: any[] }> = ({ reviews }) => {
       }
     };
 
-    fetchReviews();
-  }, [propertyId]);
+    // fetchReviews();
+  }, [propertyId, reviewss]);
 
-  if (loading) {
+  if (!loading) {
     return <p>Loading reviews...</p>;
-  } */
+  }
 
   return (
     <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-x-3 gap-y-8">

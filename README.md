@@ -1,24 +1,33 @@
-# alx-listing-app-detail
-# ALX Listing App
+# ALX Listing App – Deployed Version
 
-A simple Airbnb-style listing page built with Next.js, TypeScript, TailwindCSS, and ESLint.
+Welcome to the deployed version of the **ALX Listing App (Airbnb Clone)**, developed as part of **Milestone 6: Deploy your application**. This milestone focuses on deploying the application to a live cloud platform, ensuring the app is accessible, functional, and responsive in a production environment.
 
-## 🔧 Project Setup
+## 📌 Project Overview
 
-- **Framework**: Next.js 13+
-- **Styling**: TailwindCSS
-- **Language**: TypeScript
-- **Linting**: ESLint
+This project is part of the ALX Full Stack Software Engineering curriculum. In this milestone, we focused on:
 
-## 📁 Folder Structure
+- Preparing the app for production.
+- Hosting the application publicly (Vercel recommended).
+- Ensuring full integration with backend APIs.
+- Testing responsiveness across devices.
+- Implementing best practices in performance, security, and error handling.
 
-- `components/common/`: Reusable UI components (`Card`, `Button`)
-- `interfaces/`: TypeScript interfaces for props and types
-- `constants/`: Reusable config variables and constants
-- `public/assets/`: Images, SVGs, and other static assets
+---
 
-## ▶️ Running the Project
+## ✅ Features
 
-```bash
-npm install
-npm run dev
+- 🌐 Publicly deployed **Next.js** application
+- 🔗 Dynamic API calls using environment variables
+- 🧩 Full integration with backend services
+- 📱 Fully responsive design for mobile, tablet, and desktop
+- 📦 Optimized static assets and images
+- ❌ Graceful error handling for failed API calls
+
+---
+
+## 🔧 Technologies Used
+
+- **Frontend Framework**: [Next.js](https://nextjs.org/)
+- **Deployment**: [Vercel](https://vercel.com/)
+- **API Communication**: Axios
+- **Environment Config**: `.env.local`

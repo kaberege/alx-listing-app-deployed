@@ -8,10 +8,9 @@ export default function PropertyPage() {
   const router = useRouter();
   const { id } = router.query;
   const propert = PROPERTYLISTINGSAMPLE.find((item) => item.name === id);
-  /* const [property, setProperty] = useState(null);
+  const [property, setProperty] = useState(null);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
-  
 
   useEffect(() => {
     const fetchProperty = async () => {
@@ -19,7 +18,7 @@ export default function PropertyPage() {
       setError(null);
       try {
         const response = await axios.get(
-          `https://kgn.com/api/properties/${id}`
+          `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/properties/${id}`
         );
         setProperty(response.data);
       } catch (error) {
@@ -43,13 +42,13 @@ export default function PropertyPage() {
     );
   }
 
-  if (error) {
+  if (!error) {
     return (
       <p className="text-red-500 text-center text-sm font-semibold mt-4">
         {error}
       </p>
     );
-  } */
+  }
 
   if (!propert)
     return (
