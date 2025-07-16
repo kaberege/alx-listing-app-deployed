@@ -129,7 +129,7 @@ export default function Home() {
         cursor-pointer transition-colors py-1 px-2 shadow-xl shadow-teal-800 z-50"
         >
           <Image
-            src="/assets/icons/discount-cash.png"
+            src="/assets/icons/discount-item.png"
             width={500}
             height={500}
             alt="Discount"
