@@ -13,7 +13,7 @@ const Header = () => {
       <section className="bg-teal-600 px-2 pb-1 pt-5 sm:pt-1">
         <div className="flex items-center justify-center gap-3">
           <Image
-            src="/assets/icons/linear/school/case-minimalistic.png"
+            src="/assets/icons/Linear/School/case-minimalistic.png"
             width={500}
             height={500}
             alt="Email box"
@@ -135,7 +135,7 @@ const Header = () => {
               </div>
               <button className="flex items-center justify-center w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-amber-500 hover:bg-amber-400 transition-colors cursor-pointer">
                 <Image
-                  src="/assets/icons/linear/search/magnifers.png"
+                  src="/assets/icons/Linear/Search/magnifers.png"
                   width={500}
                   height={500}
                   alt="Search"
